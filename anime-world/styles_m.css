@@ -1,0 +1,161 @@
+/* =========================
+   Global Styles
+========================= */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #000000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+/* =========================
+   Navbar
+========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1a1a;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff9800;
+}
+
+.navbar nav a {
+  margin: 0 15px;
+  font-size: 16px;
+  color: #ddd;
+  transition: color 0.3s ease;
+}
+.navbar nav a:hover {
+  color: #ff9800;
+}
+
+.user-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.welcome-text {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  object-fit: cover;
+}
+
+.logout-btn {
+  padding: 8px 15px;
+  background: #ff4d4d;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+}
+.logout-btn:hover {
+  background: #e60000;
+}
+
+/* =========================
+   Continue Watching
+========================= */
+
+/* =========================
+   Category Headings
+========================= */
+
+
+/* =========================
+   Anime Grid & Cards
+========================= */
+.anime-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 0 40px;
+}
+
+.anime-card {
+  width: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #1a1a1a; /* dark card */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6); /* subtle shadow */
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.anime-title {
+  color: #fff; /* light text on dark card */
+}
+
+.anime-genre {
+  color: #aaa; /* lighter text */
+}
+
+
+.anime-card:hover {
+  transform: scale(1.05);
+}
+
+.anime-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.anime-info {
+  padding: 10px;
+}
+
+
+
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  .navbar nav {
+    margin: 10px 0;
+  }
+  .anime-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    padding: 0 20px;
+  }
+  #continue-watching {
+    padding: 20px;
+  }
+}
